@@ -5,6 +5,7 @@ public class SelectionSort {
         for(int i = 0; i < arrayLength; i++ ) {
             int minIndex = i;
 
+            // find the minimum element in the unsorted array
             for (int j = i + 1; j < arrayLength; j++) {
                     if (array[j] < array[minIndex]) {
                         minIndex = j;

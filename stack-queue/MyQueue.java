@@ -29,6 +29,10 @@ public class MyQueue<T> implements QueueInterface<T> {
         this.front = this.front.getNext();
         totalNodes--;
 
+        if (this.front == null) {
+            this.back = null;
+        }
+
         return deQueuedData;
     };
 

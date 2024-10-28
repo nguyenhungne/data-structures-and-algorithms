@@ -2,6 +2,7 @@ public class QuickSort {
     private static int partition(int[] array, int low, int high) {
         int pivot = array[high];
         int i = low - 1;
+        // Find the position of the pivot element
         for (int j = low; j < high; j++) {
             // If current element is smaller than pivot
             if (array[j] < pivot) {
@@ -12,6 +13,7 @@ public class QuickSort {
                 array[j] = temp;
             }
         }
+        // Place the pivot in its correct position
         int temp = array[i + 1];
         array[i + 1] = array[high];
         array[high] = temp;
